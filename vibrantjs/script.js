@@ -40,6 +40,8 @@
         var vibrant = new Vibrant(img),
             swatches = vibrant.swatches(),
             listFragment = new DocumentFragment();
+
+        let vibrantColor = null;
         
         for ( var swatch in swatches ) {
             if (swatches.hasOwnProperty(swatch) && swatches[swatch]) { 
@@ -47,11 +49,16 @@
                 var li = document.createElement('li'),
                     p = document.createElement('p'),
                     small = document.createElement('small');
+
+                if(vibrantColor == null) {
+                    vibrantColor = swatches[swatch].getHex();
+                }
                 
                 p.textContent = swatches[swatch].getHex();
                 p.style.color = swatches[swatch].getTitleTextColor();
                 small.textContent = swatch;
-                small.style.color = swatches[swatch].getBodyTextColor();
+                // small.style.color = swatches[swatch].getBodyTextColor();
+                small.style.color = vibrantColor;
                 li.style.backgroundColor = swatches[swatch].getHex();
                 li.appendChild(p);
                 li.appendChild(small);
