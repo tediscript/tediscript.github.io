@@ -22,7 +22,7 @@ title: tediscript.github.io
 # email: tediscript@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Do automation, DIY and Poor man's of something
-baseurl: "posts" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://tediscript.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: tediscript
 github_username:  tediscript
